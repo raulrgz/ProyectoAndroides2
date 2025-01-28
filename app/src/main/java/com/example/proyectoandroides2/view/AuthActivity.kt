@@ -1,16 +1,13 @@
-package com.example.proyectoandroides2
+package com.example.proyectoandroides2.view
 
 import android.os.Bundle
 import android.view.View
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.proyectoandroides2.databinding.ActivityMain2Binding
+import com.example.proyectoandroides2.utils.FragmentCommunicator
 
-class MainActivity2 : AppCompatActivity(), FragmentCommunicator {
+class AuthActivity : AppCompatActivity(), FragmentCommunicator {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMain2Binding

@@ -1,4 +1,4 @@
-package com.example.proyectoandroides2
+package com.example.proyectoandroides2.view
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.proyectoandroides2.R
 import com.example.proyectoandroides2.databinding.ActivityMain3Binding
 
 class HomeActivity : AppCompatActivity() {
