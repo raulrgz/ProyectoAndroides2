@@ -1,7 +1,6 @@
 package com.example.proyectoandroides2.core
 
 import android.util.Log
-import com.example.proyectoandroides2.model.UserData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.tasks.await

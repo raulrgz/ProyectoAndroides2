@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.proyectoandroides2.R
-import com.example.proyectoandroides2.databinding.FragmentSecondBinding
+import com.example.proyectoandroides2.databinding.SignupfragmentLayoutBinding
 import com.example.proyectoandroides2.utils.FragmentCommunicator
 import com.example.proyectoandroides2.viewModel.SignUpViewModel
 
@@ -17,7 +17,7 @@ import com.example.proyectoandroides2.viewModel.SignUpViewModel
  */
 class RegisterFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: SignupfragmentLayoutBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -30,7 +30,7 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = SignupfragmentLayoutBinding.inflate(inflater, container, false)
         communicator = requireActivity() as FragmentCommunicator
         //setupObservers()
         //setupView()
