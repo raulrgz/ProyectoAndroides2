@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.proyectoandroides2.R
-import com.example.proyectoandroides2.databinding.FragmentFirstBinding
+import com.example.proyectoandroides2.databinding.LoginfragmentLayoutBinding
 import com.example.proyectoandroides2.utils.FragmentCommunicator
 import com.example.proyectoandroides2.viewModel.LoginViewModel
 
@@ -17,7 +17,7 @@ import com.example.proyectoandroides2.viewModel.LoginViewModel
  */
 class LoginFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: LoginfragmentLayoutBinding? = null
     private val binding get() = _binding!!
     private lateinit var communicator: FragmentCommunicator
     private val viewModel by viewModels<LoginViewModel>()
@@ -30,7 +30,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = LoginfragmentLayoutBinding.inflate(inflater, container, false)
         communicator = requireActivity() as FragmentCommunicator
         binding.signInButton.setOnClickListener {
             //communicator.manageLoader(true)

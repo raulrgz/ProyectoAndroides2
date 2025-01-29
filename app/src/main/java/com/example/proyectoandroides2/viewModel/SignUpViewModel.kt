@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proyectoandroides2.core.SessionRepository
-import com.example.proyectoandroides2.model.UserData
 import kotlinx.coroutines.launch
 
 class SignUpViewModel: ViewModel() {
