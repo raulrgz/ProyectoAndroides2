@@ -32,26 +32,24 @@ class RegisterFragment : Fragment() {
 
         _binding = SignupfragmentLayoutBinding.inflate(inflater, container, false)
         communicator = requireActivity() as FragmentCommunicator
-        //setupObservers()
-        //setupView()
+        setupObservers()
         binding.signUpButton.setOnClickListener {
             viewModel.createUser(binding.emailTextInput.editText?.text.toString(),
                 binding.passwordTextInput.editText?.text.toString())
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+
         }
         return binding.root
 
     }
 
-    /*
     private fun setupObservers() {
-        viewModel.userInfo.observe(viewLifecycleOwner) { userInfo ->
-            //updateUI(userInfo)
+        viewModel.userInfo.observe(viewLifecycleOwner) {
+            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
         viewModel.loaderState.observe(viewLifecycleOwner) { showLoader ->
             communicator.manageLoader(showLoader)
         }
-    }*/
+    }
 
     /*
     private fun setupView() {

@@ -1,5 +1,6 @@
 package com.example.proyectoandroides2.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,8 +33,8 @@ class LoginFragment : Fragment() {
 
         _binding = LoginfragmentLayoutBinding.inflate(inflater, container, false)
         communicator = requireActivity() as FragmentCommunicator
+        setupObservers()
         binding.signInButton.setOnClickListener {
-            //communicator.manageLoader(true)
             viewModel.loginUser(binding.emailLoginInput.editText?.text.toString(), binding.passwordLoginInput.editText?.text.toString())
         }
         binding.signUpTextView.setOnClickListener {
@@ -42,6 +43,18 @@ class LoginFragment : Fragment() {
 
         return binding.root
 
+    }
+
+    private fun setupObservers() {
+        viewModel.loginInfo.observe(viewLifecycleOwner) {
+            val intent = Intent(activity, ShopActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            activity?.finish()
+        }
+        viewModel.loaderState.observe(viewLifecycleOwner) { showLoader ->
+            communicator.manageLoader(showLoader)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
