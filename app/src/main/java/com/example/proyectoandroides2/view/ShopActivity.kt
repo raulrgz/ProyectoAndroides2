@@ -1,6 +1,7 @@
 package com.example.proyectoandroides2.view
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -25,7 +26,11 @@ class ShopActivity : AppCompatActivity(), FragmentCommunicator {
     }
 
     override fun manageLoader(isVisible: Boolean) {
-
+        if(isVisible) {
+            binding.loaderView2.visibility = View.VISIBLE
+        }else{
+            binding.loaderView2.visibility = View.GONE
+        }
     }
 
 }

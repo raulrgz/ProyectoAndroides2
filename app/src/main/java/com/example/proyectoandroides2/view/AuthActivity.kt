@@ -20,12 +20,15 @@ class AuthActivity : AppCompatActivity(), FragmentCommunicator {
 
     }
 
+
     override fun manageLoader(isVisible: Boolean) {
+
         if(isVisible) {
             binding.loaderView.visibility = View.VISIBLE
         }else{
             binding.loaderView.visibility = View.GONE
         }
+
     }
 
 }
